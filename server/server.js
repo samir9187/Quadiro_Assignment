@@ -11,26 +11,7 @@ dotenv.config();
 const app = express();
 connectDB();
 
-// CORS configuration
-const corsOptions = {
-  origin: (origin, callback) => {
-    // Allow requests from specific origins or all origins in development
-    const allowedOrigins = [
-      process.env.DEV_CLIENT_URL,
-      process.env.PROD_CLIENT_URL,
-    ];
-
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 app.use("/admin", adminRoutes);
