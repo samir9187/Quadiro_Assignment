@@ -1,0 +1,28 @@
+.user-dashboard {
+    padding: 20px;
+    position: relative;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #ff1a1a;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.car-list-container {
+    margin-top: 20px;
+}
