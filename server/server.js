@@ -13,7 +13,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "https://quadiro.netlify.app/",
+    origin: "https://quadiro.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
