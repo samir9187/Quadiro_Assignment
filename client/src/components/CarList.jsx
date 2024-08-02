@@ -8,8 +8,8 @@ function CarList({ token }) {
   const role = localStorage.getItem("role");
   const carsUrl =
     role === "admin"
-      ? "http://localhost:5000/admin/cars"
-      : "http://localhost:5000/user/cars";
+      ? `${import.meta.env.VITE_API_URL}/admin/cars`
+      : `${import.meta.env.VITE_API_URL}/user/cars`;
 
   useEffect(() => {
     const fetchCars = async () => {

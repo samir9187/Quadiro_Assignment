@@ -10,11 +10,17 @@ function RegisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/v1/register", {
-        username,
-        password,
-        role,
-      });
+      await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/v1/register`,
+        {
+          username,
+          password,
+          role,
+        },
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       alert("Registration successful");
     } catch (error) {
       console.error("Registration failed:", error);

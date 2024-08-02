@@ -9,9 +9,12 @@ function UserDashboard({ token, onLogout }) {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/user/cars", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/user/cars`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
         setCars(response.data);
       } catch (error) {
         console.error("Failed to fetch cars:", error);

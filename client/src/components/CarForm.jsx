@@ -9,10 +9,13 @@ function CarForm({ token }) {
   const handleSubmit = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/admin/cars",
+        `${import.meta.env.VITE_API_URL}/admin/cars`,
         { name, year, price },
         {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
         }
       );
       alert("Car added successfully");

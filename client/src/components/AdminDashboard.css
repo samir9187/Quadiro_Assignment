@@ -1,4 +1,4 @@
-.admin-dashboard {
+/* .admin-dashboard {
     padding: 20px;
     position: relative;
 }
@@ -56,7 +56,7 @@ button:hover {
 .admin-form-buttons {
     display: flex;
     gap: 10px;
-    /* Add space between buttons */
+
 }
 
 .car-list {
@@ -90,4 +90,145 @@ th {
     font-weight: bold;
     margin-left: 10px;
     margin-left: 1220px;
+} */
+
+.admin-dashboard {
+    padding: 20px;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #ff1a1a;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.admin-form-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.edit-button {
+    background-color: #007bff;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.admin-form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.car-list {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.username-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+@media (max-width: 630px) {
+    .car-list table {
+        font-size: 14px;
+
+    }
+
+    .car-list td,
+    .car-list th {
+        padding: 8px;
+
+    }
+
+    .car-list button {
+        display: block;
+        width: 80%;
+        margin-bottom: 10px;
+
+    }
+
+    .admin-form-buttons {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 385px) {
+    .logout-button {
+        left: 310px;
+        width: 75px;
+
+    }
 }

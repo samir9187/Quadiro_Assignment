@@ -4,7 +4,8 @@ import LoginForm from "./components/LoginForm";
 import UserDashboard from "./components/UserDashboard";
 import AdminDashboard from "./components/AdminDashboard";
 import "./App.css";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [role, setRole] = useState(localStorage.getItem("role") || "");
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer />
       {token ? (
         role === "admin" ? (
           <div>
